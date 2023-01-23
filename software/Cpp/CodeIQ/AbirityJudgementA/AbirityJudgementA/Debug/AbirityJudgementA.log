@@ -1,0 +1,4 @@
+﻿  Main.cpp
+c:\users\ryuya\dropbox\source\cpp\abirityjudgementa\abirityjudgementa\main.cpp(14): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  AbirityJudgementA.vcxproj -> C:\Users\ryuya\Dropbox\Source\Cpp\AbirityJudgementA\Debug\AbirityJudgementA.exe
+  AbirityJudgementA.vcxproj -> C:\Users\ryuya\Dropbox\Source\Cpp\AbirityJudgementA\Debug\AbirityJudgementA.pdb (Partial PDB)

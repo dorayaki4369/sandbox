@@ -1,0 +1,29 @@
+# ********************************************************************** 
+# 
+# THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT DIRECTLY
+# 
+# 	Auto-generated lists of source files at this location
+#
+# ********************************************************************** 
+C_SRCS += \
+${addprefix terasic_lib/,\
+I2C.c \
+JtagUart.c \
+LCD.c \
+LED.c \
+SDCardDriver.c \
+SEG7.c \
+Uart.c \
+debug.c \
+flash.c \
+pio_header.c \
+}
+
+CXX_SRCS += \
+${addprefix terasic_lib/,\
+}
+
+ASM_SRCS += \
+${addprefix terasic_lib/,\
+}
+

@@ -1,0 +1,6 @@
+module clock_gen(clock);
+	input clock;
+	
+	TD4 td4(clock)
+	
+endmodule

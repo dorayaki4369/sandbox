@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/mat.hpp(2586): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/imgproc.hpp(592): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  コード生成しています。
+  All 363 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  CutAnimeFace.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\CutAnimeFace\x64\Release\CutAnimeFace.exe
+  CutAnimeFace.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\CutAnimeFace\x64\Release\CutAnimeFace.pdb (Full PDB)

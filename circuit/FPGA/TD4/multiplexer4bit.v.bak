@@ -1,0 +1,9 @@
+module multiplexer4bit(inputA, inputB, inputC, inputD, outputY, select) begin
+	input  [3:0] inputA, inputB, inputC, inputD;
+	output [3:0] outputY;
+	input  [1:0] select;
+	
+	case(select)
+		2'b00 : outpuY <= inputA;
+		
+endmodule

@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.332
+TNS   : -12.824
+
+Type  : Slow 1200mV 85C Model Setup 'swreg'
+Slack : -0.056
+TNS   : -0.119
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.106
+TNS   : -0.106
+
+Type  : Slow 1200mV 85C Model Hold 'swreg'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'swreg'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cnt[15]'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.057
+TNS   : -9.682
+
+Type  : Slow 1200mV 0C Model Setup 'swreg'
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.100
+TNS   : -0.100
+
+Type  : Slow 1200mV 0C Model Hold 'swreg'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'swreg'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cnt[15]'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.321
+TNS   : -1.111
+
+Type  : Fast 1200mV 0C Model Setup 'swreg'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.108
+TNS   : -0.108
+
+Type  : Fast 1200mV 0C Model Hold 'swreg'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -19.967
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'swreg'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cnt[15]'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

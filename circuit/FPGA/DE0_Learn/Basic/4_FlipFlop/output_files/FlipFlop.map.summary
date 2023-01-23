@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Aug 23 22:39:54 2018
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : FlipFlop
+Top-level Entity Name : FlipFlop
+Family : Cyclone III
+Total logic elements : 1
+    Total combinational functions : 1
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

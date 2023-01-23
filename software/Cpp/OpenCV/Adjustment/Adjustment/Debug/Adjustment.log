@@ -1,0 +1,11 @@
+﻿  Main.cpp
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\mat.hpp(2586): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\imgproc.hpp(592): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+Main.obj : error LNK2019: 未解決の外部シンボル "private: char * __thiscall cv::String::allocate(unsigned int)" (?allocate@String@cv@@AAEPADI@Z) が関数 "public: __thiscall cv::String::String(char const *)" (??0String@cv@@QAE@PBD@Z) で参照されました。
+Main.obj : error LNK2019: 未解決の外部シンボル "private: void __thiscall cv::String::deallocate(void)" (?deallocate@String@cv@@AAEXXZ) が関数 "public: __thiscall cv::String::~String(void)" (??1String@cv@@QAE@XZ) で参照されました。
+Main.obj : error LNK2019: 未解決の外部シンボル "int __cdecl cv::createTrackbar(class cv::String const &,class cv::String const &,int *,int,void (__cdecl*)(int,void *),void *)" (?createTrackbar@cv@@YAHABVString@1@0PAHHP6AXHPAX@Z2@Z) が関数 _main で参照されました。
+C:\SDK\OpenCV_3.2.0\build\x64\vc14\lib\opencv_world320d.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' X86' と競合しています
+C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\Adjustment\Debug\Circle.exe : fatal error LNK1120: 3 件の未解決の外部参照

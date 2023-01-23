@@ -1,0 +1,11 @@
+#ifndef PIO_HEADER_H_
+#define PIO_HEADER_H_
+
+typedef enum{
+    PIO_HEADER_0 = 0,
+    PIO_HEADER_1
+}PIO_HEADER_ID;
+
+alt_u32 PIOH_Verify(PIO_HEADER_ID HeaderID);
+
+#endif /*PIO_HEADER_H_*/

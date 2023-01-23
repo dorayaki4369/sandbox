@@ -1,0 +1,13 @@
+module register4bit(clk, reset, indata, outdata);
+	input        clk;
+	input        reset;
+	input  [3:0] indata;
+	output [3:0] outdata;
+	
+	reg    [3:0] outdata;
+	
+	always @(posedge clk or negedge reset) begin
+		if(!reset) begin
+			outdata <= 4'b0000;
+		end else begin
+			outdata <= indata;

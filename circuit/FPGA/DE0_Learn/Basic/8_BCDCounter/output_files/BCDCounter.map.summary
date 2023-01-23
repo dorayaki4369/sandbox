@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Aug 27 23:16:21 2018
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : BCDCounter
+Top-level Entity Name : BCDCounter
+Family : Cyclone III
+Total logic elements : 40
+    Total combinational functions : 39
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

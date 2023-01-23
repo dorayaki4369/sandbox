@@ -1,0 +1,880 @@
+10-29 22:05:08 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid; SQL statement: SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS èÛë‘
+     , CustomerName
+     FROM
+         (
+          SELECT 
+            CustomerName
+          FROM
+              (
+SELECT
+   CustomerName
+FROM
+   Customers
+
+              )
+          EXCEPT 
+          SELECT 
+            CustomerName
+          FROM
+              (
+Select CustomersName From Customers
+              )
+         )
+     UNION ALL
+     SELECT
+     '1' AS èÛë‘
+     , CustomerName
+     FROM
+         (
+          SELECT 
+            CustomerName
+          FROM
+              (
+Select CustomersName From Customers
+              )
+          EXCEPT
+          SELECT 
+            CustomerName
+          FROM
+              (
+SELECT
+   CustomerName
+FROM
+   Customers
+
+              )
+         )
+    )
+; [90109-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid [90109-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.table.TableView.getScanIndex(TableView.java:187)
+	at org.h2.table.TableFilter.getBestPlanItem(TableFilter.java:89)
+	at org.h2.table.Plan.calculateCost(Plan.java:79)
+	at org.h2.command.dml.Optimizer.testPlan(Optimizer.java:168)
+	at org.h2.command.dml.Optimizer.calculateBestPlan(Optimizer.java:71)
+	at org.h2.command.dml.Optimizer.optimize(Optimizer.java:218)
+	at org.h2.command.dml.Select.preparePlan(Select.java:508)
+	at org.h2.command.dml.Select.prepare(Select.java:475)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:05:08 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column CUSTOMERSNAME not found; SQL statement: Select CustomersName From Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column CUSTOMERSNAME not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:05:08 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column CUSTOMERSNAME not found; SQL statement: Select CustomersName From Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column CUSTOMERSNAME not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+10-29 22:08:25 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid; SQL statement: SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS èÛë‘
+     , ProductName
+     , Price
+     FROM
+         (
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+SELECT
+  ProductName
+, Price
+FROM
+  Products
+
+              )
+          EXCEPT 
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+Select Price, ProductName from Customers
+              )
+         )
+     UNION ALL
+     SELECT
+     '1' AS èÛë‘
+     , ProductName
+     , Price
+     FROM
+         (
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+Select Price, ProductName from Customers
+              )
+          EXCEPT
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              ( 
+SELECT
+  ProductName
+, Price
+FROM
+  Products
+
+              )
+         )
+    )
+; [90109-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid [90109-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.table.TableView.getScanIndex(TableView.java:187)
+	at org.h2.table.TableFilter.getBestPlanItem(TableFilter.java:89)
+	at org.h2.table.Plan.calculateCost(Plan.java:79)
+	at org.h2.command.dml.Optimizer.testPlan(Optimizer.java:168)
+	at org.h2.command.dml.Optimizer.calculateBestPlan(Optimizer.java:71)
+	at org.h2.command.dml.Optimizer.optimize(Optimizer.java:218)
+	at org.h2.command.dml.Select.preparePlan(Select.java:508)
+	at org.h2.command.dml.Select.prepare(Select.java:475)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:08:25 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column PRICE not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:08:25 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column PRICE not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+10-29 22:08:34 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid; SQL statement: SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS èÛë‘
+     , ProductName
+     , Price
+     FROM
+         (
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+SELECT
+  ProductName
+, Price
+FROM
+  Products
+
+              )
+          EXCEPT 
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+Select Price, ProductName from Customers
+              )
+         )
+     UNION ALL
+     SELECT
+     '1' AS èÛë‘
+     , ProductName
+     , Price
+     FROM
+         (
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              (
+Select Price, ProductName from Customers
+              )
+          EXCEPT
+          SELECT 
+            ProductName
+          , Price
+          FROM
+              ( 
+SELECT
+  ProductName
+, Price
+FROM
+  Products
+
+              )
+         )
+    )
+; [90109-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: View PUBLIC.TEMP_VIEW is invalid [90109-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.table.TableView.getScanIndex(TableView.java:187)
+	at org.h2.table.TableFilter.getBestPlanItem(TableFilter.java:89)
+	at org.h2.table.Plan.calculateCost(Plan.java:79)
+	at org.h2.command.dml.Optimizer.testPlan(Optimizer.java:168)
+	at org.h2.command.dml.Optimizer.calculateBestPlan(Optimizer.java:71)
+	at org.h2.command.dml.Optimizer.optimize(Optimizer.java:218)
+	at org.h2.command.dml.Select.preparePlan(Select.java:508)
+	at org.h2.command.dml.Select.prepare(Select.java:475)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:08:34 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column PRICE not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+10-29 22:08:34 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+org.h2.jdbc.JdbcSQLException: Column PRICE not found [42S22-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSQLException(Message.java:47)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:110)
+	at org.h2.command.dml.Select.prepare(Select.java:461)
+	at org.h2.command.Parser.prepareCommand(Parser.java:191)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)

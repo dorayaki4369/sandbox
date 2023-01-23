@@ -1,0 +1,115 @@
+|UniversalCounter
+btn2 => btn2.IN1
+btn1 => btn1.IN2
+clk => clk.IN1
+hex0[0] <= LedDec:ledDec1.port1
+hex0[1] <= LedDec:ledDec1.port1
+hex0[2] <= LedDec:ledDec1.port1
+hex0[3] <= LedDec:ledDec1.port1
+hex0[4] <= LedDec:ledDec1.port1
+hex0[5] <= LedDec:ledDec1.port1
+hex0[6] <= LedDec:ledDec1.port1
+hex0[7] <= LedDec:ledDec1.port1
+hex1[0] <= LedDec:ledDec2.port1
+hex1[1] <= LedDec:ledDec2.port1
+hex1[2] <= LedDec:ledDec2.port1
+hex1[3] <= LedDec:ledDec2.port1
+hex1[4] <= LedDec:ledDec2.port1
+hex1[5] <= LedDec:ledDec2.port1
+hex1[6] <= LedDec:ledDec2.port1
+hex1[7] <= LedDec:ledDec2.port1
+
+
+|UniversalCounter|unchatter:uc
+din => dff.DATAIN
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+dout <= dff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UniversalCounter|ucounter:counter1
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UniversalCounter|ucounter:counter2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UniversalCounter|LedDec:ledDec1
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+decNum[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+decNum[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+decNum[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+decNum[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+decNum[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+decNum[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+decNum[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+decNum[7] <= <VCC>
+
+
+|UniversalCounter|LedDec:ledDec2
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+decNum[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+decNum[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+decNum[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+decNum[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+decNum[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+decNum[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+decNum[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+decNum[7] <= <VCC>
+
+

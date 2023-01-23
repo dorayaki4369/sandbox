@@ -1,0 +1,16 @@
+﻿  Main.cpp
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/mat.hpp(2586): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/imgproc.hpp(592): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+Main.cpp(197): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+Main.cpp(214): warning C4244: '引数': 'const int' から 'float' への変換です。データが失われる可能性があります。
+Main.cpp(215): warning C4244: '引数': 'const int' から 'float' への変換です。データが失われる可能性があります。
+  コード生成しています。
+  8 of 513 functions ( 1.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  コード生成が終了しました。
+  DetectionSample.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\DetectionSample\x64\Release\DetectionSample.exe
+  DetectionSample.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\DetectionSample\x64\Release\DetectionSample.pdb (Full PDB)

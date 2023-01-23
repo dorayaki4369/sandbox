@@ -1,0 +1,163 @@
+#include "terasic_includes.h"
+#include "pio_header.h"
+
+
+bool gpio_read(PIO_HEADER_ID HeaderID, alt_u8 index);
+void gpio_write(PIO_HEADER_ID HeaderID, alt_u8 index, bool bPullHigh);
+
+alt_u32 PIOH_Verify(PIO_HEADER_ID HeaderID){
+    alt_u32 dwPassMask = 0x00, dwMask = 0x01;
+ //   bool bSuccess = FALSE;
+    alt_u32 time_start;
+    time_start = alt_nticks();
+    int p, d, v;
+    const int nLen = 40;
+    alt_u8 from_pin, to_pin;
+    bool bHigh, bResult, bPass;
+    bool bszPass[40];
+  //  char szText[32];
+    
+    IOWR_ALTERA_AVALON_PIO_DIRECTION((HeaderID == PIO_HEADER_0)?GPIO_0_BASE:GPIO_1_BASE, 0x00000000); // default as read port
+  
+    for(p=1;p<nLen;p+=2){  // pin
+        //if (p != 19 && p != 21)
+        //    continue;
+        bPass = TRUE;
+        for(d=0;d<2 && bPass;d++){ // direction d=0: left->right,d=1:right->left 
+            if (p == 11 || p ==29)
+                continue;
+            if (d == 0 && (p == 1 || p == 3))
+                continue;
+            if (d == 1 && (p == 19 || p == 21))
+                continue;
+            from_pin = (d == 0)?p:p+1;
+            to_pin = (d == 0)?(p + 1):p;    
+            for(v=0;v<2 && bPass;v++){ // value
+                bHigh = (v==1)?TRUE:FALSE;
+                // write
+                gpio_write(HeaderID, from_pin,bHigh);   
+                // read & compaore
+                usleep(500);  // !!!! must delay before read.
+                bResult = gpio_read(HeaderID, to_pin);
+                if (bHigh ^ bResult)
+                    bPass = FALSE;
+               // if (p == 21 || p==19){
+               //     APP_DEBUG(("from_pin=%d, to_pin=%d, bHigh=%d, bResult=%d, bPass=%d\r\n", from_pin,to_pin,  bHigh, bResult , bPass));
+               // }                    
+            }  // for v    
+        }  // for d
+        bszPass[p] = bPass;            
+        bszPass[p+1] = bPass;          
+        if (p == 11 || p ==29){
+           // APP_DEBUG(("[GPIO-%d] pin %d-%d : ignored \r\n", bGPIO0?0:1, p, p+1));
+        }else{
+           // APP_DEBUG(("[GPIO-%d] pin %d-%d : %s \r\n", bGPIO0?0:1, p, p+1, bPass?"pass":"ng"));
+        }            
+        if (bPass)
+            dwPassMask |= dwMask;
+        dwMask <<= 1;    
+    } 
+    //APP_REPORT("[GPIO-%d] %s (%ld second)\r\n", bGPIO0?0:1, bSuccess?"success":"fail", (alt_nticks()-time_start)/alt_ticks_per_second());
+   // sprintf(szText, "GPIO-%d", bGPIO0?0:1);
+   // report_result(szText, bSuccess, time_start);
+    return dwPassMask;
+}
+
+
+
+// first one is dummpy, index from 1
+static alt_8 szGpioMap[] = {-1, 
+        -1, 0, -1, 1, 2, 3, 4, 5, 6, 7, 
+        -1, -1, 8, 9, 10, 11, 12, 13, -1, 14, 
+        -1, 15, 16, 17, 18, 19, 20, 21, -1, -1, 
+        22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+
+// index= 1,2.....
+void gpio_write(PIO_HEADER_ID HeaderID, alt_u8 index, bool bPullHigh){
+    alt_8 shift ;
+    alt_u32 data, mask, direction;
+    alt_u32 mm_addr;
+    //APP_DEBUG(("[GPIO] gpio_write(%s, %d, %s)\r\n", bGPIO0?"TRUE":"FALSE", index, bPullHigh?"TRUE":"FALSE"));
+    if (index == 1  || index == 3){
+        // INCLK, no use
+       //APP_DEBUG(("[GPIO] invalid pio pin %d\r\n", index));
+    }else if (index == 19  || index == 21){
+        // CLKOUT
+        //data = IORD_ALTERA_AVALON_PIO_DATA(bGPIO0?GPIO0_CLKOUT_BASE:GPIO1_CLKOUT_BASE);
+        //APP_DEBUG(("[GPIO] CLKOUT read=%02Xh\r\n", (alt_u8)data));
+        data = 0x00;
+        mask = 0x01;
+        if (index == 21)
+            mask <<= 1;
+        if (bPullHigh){
+            data |= mask;
+        }else{
+            data &= ~mask; // bug fix, 09/10/2007
+        }
+        //APP_DEBUG(("[GPIO] CLKOUT write=%02Xh\r\n", (alt_u8)data));
+        IOWR_ALTERA_AVALON_PIO_DATA((HeaderID == PIO_HEADER_0)?GPIO0_CLKOUT_BASE:GPIO1_CLKOUT_BASE, data);
+    }else if (index == 11  || index == 12 || index == 29  || index == 30){
+        // no use
+        //APP_DEBUG(("[GPIO] invalid pio pin %d\r\n", index));
+    }else{
+        mm_addr = (HeaderID == PIO_HEADER_0)?GPIO_0_BASE:GPIO_1_BASE;
+        shift = szGpioMap[index];
+        direction = IORD_ALTERA_AVALON_PIO_DIRECTION(mm_addr);
+        //APP_DEBUG(("    gpio_write, read direction:%lXh\r\n", direction));
+        data = IORD_ALTERA_AVALON_PIO_DATA(mm_addr);
+        //APP_DEBUG(("    gpio_write, read data:%lXh\r\n", data));
+        mask = 0x01 << shift;
+        direction |= mask; // 1:output, 0:input
+        if (bPullHigh){
+            data |= mask;
+        }else{
+            data &= ~mask;
+        }
+        //APP_REPORT("    gpio_write, write direction:%lXh\r\n", direction);
+        IOWR_ALTERA_AVALON_PIO_DIRECTION(mm_addr, direction); // set as write port
+        //APP_REPORT("    gpio_write, write data:%lXh\r\n", data);
+        IOWR_ALTERA_AVALON_PIO_DATA(mm_addr, data); // write data
+        //APP_REPORT("    gpio_write, mask:%lXh\r\n", mask);
+               
+    }     
+    //APP_REPORT("    write pin-%d=%s\r\n", index, bPullHigh?"high":"low");          
+}
+
+
+// index= 1,2.....
+bool gpio_read(PIO_HEADER_ID HeaderID, alt_u8 index){
+    bool bHigh = FALSE;
+    alt_8 shift;
+    alt_u32 data, mm_addr, direction, mask;
+    //APP_DEBUG(("[GPIO] gpio_read(%s, %d)\r\n", bGPIO0?"TRUE":"FALSE", index));
+    if (index == 1  || index == 3){
+        // INCLK
+        data = IORD_ALTERA_AVALON_PIO_DATA((HeaderID == PIO_HEADER_0)?GPIO0_CLKIN_BASE:GPIO1_CLKIN_BASE);
+        //APP_REPORT("    gpio_read, read clkout data:%lXh\r\n", data);
+        if ((index == 1 && data & 0x01) || (index == 3 && data & 0x02))
+            bHigh = TRUE;
+    }else if (index == 19  || index == 21){
+        // OUTCLK, no use
+      //  APP_DEBUG(("[GPIO] invalid pio pin %d\r\n", index));
+    }else if (index == 11  || index == 12 || index == 29  || index == 30){
+        // no use
+      //  APP_DEBUG(("[GPIO] invalid pio pin %d\r\n", index));
+    }else{
+        mm_addr = (HeaderID == PIO_HEADER_0)?GPIO_0_BASE:GPIO_1_BASE;
+        shift = szGpioMap[index];
+        mask = 0x01 << shift;
+        direction = IORD_ALTERA_AVALON_PIO_DIRECTION(mm_addr);
+        //APP_DEBUG(("    gpio_read, read direction:%lXh\r\n", direction));
+        direction &= ~mask; 
+        //APP_DEBUG(("    gpio_read, write direction:%lXh\r\n", direction));
+        IOWR_ALTERA_AVALON_PIO_DIRECTION(mm_addr, direction);  // set as read port
+        //APP_REPORT("    gpio_read, read data:%lXh\r\n", data);
+        data = IORD_ALTERA_AVALON_PIO_DATA(mm_addr);  // read data
+        //APP_REPORT("    gpio_read, read data:%lXh\r\n", data);
+        //APP_REPORT("    gpio_read, mask:%lXh\r\n", mask);
+        if (data & mask)
+            bHigh = TRUE;
+    }   
+    //APP_REPORT("    read pin-%d=%s\r\n", index, bHigh?"high":"low");          
+    return bHigh;
+}

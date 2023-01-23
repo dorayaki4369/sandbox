@@ -1,0 +1,14 @@
+|Lesson2
+sw[0] => w_and.IN0
+sw[1] => w_and.IN1
+sw[2] => w_or.IN0
+sw[3] => w_or.IN1
+sw[4] => led[2].DATAIN
+sw[5] => w_xor.IN0
+sw[6] => w_xor.IN1
+led[0] << w_and.DB_MAX_OUTPUT_PORT_TYPE
+led[1] << w_or.DB_MAX_OUTPUT_PORT_TYPE
+led[2] << sw[4].DB_MAX_OUTPUT_PORT_TYPE
+led[3] << w_xor.DB_MAX_OUTPUT_PORT_TYPE
+
+

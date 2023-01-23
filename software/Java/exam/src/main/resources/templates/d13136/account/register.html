@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/account/style.css" th:href="@{/account/style.css}" rel="stylesheet"></link>
+    <meta charset="UTF-8"/>
+    <title>アカウント登録</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 9em;
+        }
+    </style>
+</head>
+<body>
+
+<h2>アカウント登録</h2>
+
+<p th:if="${message != null}" th:utext="${message}">メッセージ</p>
+<p th:if="${errMessage != null}" th:utext="${errMessage}" style="color : red">メッセージ</p>
+
+<form method="post">
+    <span>アカウント名:</span><input name="accountName" /><br />
+    <span>パスワード:</span><input name="password" type="password"/><br />
+    <span>パスワード(確認):</span><input name="password2nd" type="password"/><br />
+    <span>URL:</span><input name="url" /><br />
+    <button type="submit">登録</button>
+</form>
+
+<hr />
+
+<a href="list">一覧</a> <a href="searchURL">URL検索</a>
+
+</body>
+</html>

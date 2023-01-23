@@ -1,0 +1,4 @@
+﻿  Main.cpp
+LINK : warning LNK4098: defaultlib 'LIBCMTD' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
+  Graphics.vcxproj -> C:\Users\龍弥\Dropbox\Source\Cpp\Graphics\Debug\Graphics.exe
+  Graphics.vcxproj -> C:\Users\龍弥\Dropbox\Source\Cpp\Graphics\Debug\Graphics.pdb (Partial PDB)

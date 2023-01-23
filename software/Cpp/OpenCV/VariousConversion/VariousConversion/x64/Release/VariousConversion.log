@@ -1,0 +1,14 @@
+﻿  Main.cpp
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/mat.hpp(2586): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/core/utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\SDK\OpenCV_3.2.0\build\include\opencv2/imgproc.hpp(592): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+Main.cpp(100): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コード生成しています。
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\variousconversion\variousconversion\main.cpp(26): warning C4717: 'operator++<enum PROCESSIONG>': すべてのコントロールのパス、関数を回帰するとランタイム スタック オーバーフローが発生します。
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\variousconversion\variousconversion\main.cpp(25): warning C4172: ローカル変数またはテンポラリのアドレスを返します: prev
+  All 204 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  VariousConversion.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\VariousConversion\x64\Release\VariousConversion.exe
+  VariousConversion.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\VariousConversion\x64\Release\VariousConversion.pdb (Full PDB)

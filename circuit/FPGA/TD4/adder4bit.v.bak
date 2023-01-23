@@ -1,0 +1,8 @@
+module adder4bit(inputA, inputB, outputY);
+	input  [3:0] inputA, inputB;
+	output [3:0] outputY;
+	
+	assign outputY <=
+	
+	function
+endmodule

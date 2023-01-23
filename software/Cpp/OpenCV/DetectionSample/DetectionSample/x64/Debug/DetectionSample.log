@@ -1,0 +1,11 @@
+﻿  Main.cpp
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\mat.hpp(2586): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\persistence.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\core\utility.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\sdk\opencv_3.2.0\build\include\opencv2\imgproc.hpp(592): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\detectionsample\detectionsample\main.cpp(31): warning C4244: '引数': 'const int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\detectionsample\detectionsample\main.cpp(32): warning C4244: '引数': 'const int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\detectionsample\detectionsample\main.cpp(105): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  DetectionSample.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\DetectionSample\x64\Debug\DetectionSample.exe
+  DetectionSample.vcxproj -> C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\DetectionSample\x64\Debug\DetectionSample.pdb (Partial PDB)

@@ -1,0 +1,374 @@
+2016-03-18 12:21:38,319 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2016-03-18 12:21:38,319 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2016-03-18 12:21:38,413 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.WindowsLAFDefinition
+2016-03-18 12:21:38,685 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2016-03-18 12:21:39,185 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=C:\Program Files\Java\jre1.8.0_73\bin
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.73-b02
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=;
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=C:\Users\å™å·\Desktop\Ç±ÇÍÇROMÇ…Ç‚Ç≠\SQL_DRILL\SQUAT_APP\squat-1.0.2\squat-1.0.2
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_73-b02
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=amd64
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Windows 10
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=MS932
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.0
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=MS932
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.awt.windows.WToolkit
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_73
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=windows
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=amd64
+2016-03-18 12:21:47,021 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@5745ca0e[id=1,name=ddd] was loaded
+2016-03-18 12:21:59,793 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitActionAdapter:21) - squat process is shutting down
+2019-04-25 15:52:37,652 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2019-04-25 15:52:37,658 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2019-04-25 15:52:38,048 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.MacOSXLAFDefinition
+2019-04-25 15:52:43,015 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2019-04-25 15:52:43,882 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2019-04-25 15:52:44,266 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2019-04-25 15:52:44,266 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.121-b13
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=:
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2019-04-25 15:52:44,267 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=unknown
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=/Users/ken5hosoya/Dropbox/0G„ÄêÊó¢ÂàäÊõ∏Á±ç„Äë/ÊîπË®Ç3ÁâàSQLÊõ∏„ÅçÊñπ„Éà„Çô„É™„É´/Â¢óÂà∑/3Âà∑/resql3squat/squat-1.0.2/squat-1.0.2
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_121-b13
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86_64
+2019-04-25 15:52:44,268 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Mac OS X
+2019-04-25 15:52:44,269 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=UTF-8
+2019-04-25 15:52:44,269 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2019-04-25 15:52:44,269 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2019-04-25 15:52:44,270 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.14.2
+2019-04-25 15:52:44,270 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2019-04-25 15:52:44,270 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=UTF-8
+2019-04-25 15:52:44,270 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_121
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=null
+2019-04-25 15:52:44,271 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=
+2019-04-25 15:53:15,910 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@f736069[id=2,name=  d] was loaded
+2019-04-25 16:03:56,876 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2019-04-25 16:03:56,878 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2019-04-25 16:03:57,135 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.MacOSXLAFDefinition
+2019-04-25 16:04:00,750 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2019-04-25 16:04:01,270 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2019-04-25 16:04:01,543 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2019-04-25 16:04:01,543 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2019-04-25 16:04:01,544 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib
+2019-04-25 16:04:01,544 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.121-b13
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=:
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=unknown
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=/Users/ken5hosoya/Dropbox/0G„ÄêÊó¢ÂàäÊõ∏Á±ç„Äë/ÊîπË®Ç3ÁâàSQLÊõ∏„ÅçÊñπ„Éà„Çô„É™„É´/Â¢óÂà∑/3Âà∑/resql3squat/squat-1.0.2/squat-1.0.2
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_121-b13
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+2019-04-25 16:04:01,545 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86_64
+2019-04-25 16:04:01,546 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Mac OS X
+2019-04-25 16:04:01,546 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=UTF-8
+2019-04-25 16:04:01,546 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2019-04-25 16:04:01,546 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2019-04-25 16:04:01,547 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.14.2
+2019-04-25 16:04:01,547 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2019-04-25 16:04:01,547 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=UTF-8
+2019-04-25 16:04:01,547 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2019-04-25 16:04:01,547 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2019-04-25 16:04:01,548 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+2019-04-25 16:04:01,548 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2019-04-25 16:04:01,548 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_121
+2019-04-25 16:04:01,548 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=null
+2019-04-25 16:04:01,548 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=
+2019-04-25 16:04:07,822 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@f736069[id=3,name=ss] was loaded
+2019-04-25 16:05:06,130 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2019-04-25 16:05:06,132 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2019-04-25 16:05:06,377 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.MacOSXLAFDefinition
+2019-04-25 16:05:09,736 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2019-04-25 16:05:10,229 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2019-04-25 16:05:10,459 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2019-04-25 16:05:10,459 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2019-04-25 16:05:10,460 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib
+2019-04-25 16:05:10,460 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.121-b13
+2019-04-25 16:05:10,460 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=:
+2019-04-25 16:05:10,460 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=unknown
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=/Users/ken5hosoya/Dropbox/0G„ÄêÊó¢ÂàäÊõ∏Á±ç„Äë/ÊîπË®Ç3ÁâàSQLÊõ∏„ÅçÊñπ„Éà„Çô„É™„É´/Â¢óÂà∑/3Âà∑/resql3squat/squat-1.0.2/squat-1.0.2
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_121-b13
+2019-04-25 16:05:10,461 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+2019-04-25 16:05:10,462 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86_64
+2019-04-25 16:05:10,462 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Mac OS X
+2019-04-25 16:05:10,462 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=UTF-8
+2019-04-25 16:05:10,462 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2019-04-25 16:05:10,463 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2019-04-25 16:05:10,463 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.14.2
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=UTF-8
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2019-04-25 16:05:10,464 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_121
+2019-04-25 16:05:10,465 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=null
+2019-04-25 16:05:10,465 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=
+2019-04-25 16:05:17,176 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@f736069[id=4,name=a] was loaded
+2019-04-25 16:06:14,210 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitActionAdapter:21) - squat process is shutting down
+2019-04-26 17:13:15,018 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2019-04-26 17:13:15,022 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2019-04-26 17:13:15,621 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.MacOSXLAFDefinition
+2019-04-26 17:13:19,489 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2019-04-26 17:13:20,151 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2019-04-26 17:13:20,523 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2019-04-26 17:13:20,523 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.121-b13
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=:
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2019-04-26 17:13:20,524 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=unknown
+2019-04-26 17:13:20,525 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2019-04-26 17:13:20,525 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=/Users/ken5hosoya/Dropbox/0G„ÄêÊó¢ÂàäÊõ∏Á±ç„Äë/ÊîπË®Ç3ÁâàSQLÊõ∏„ÅçÊñπ„Éà„Çô„É™„É´/Â¢óÂà∑/3Âà∑/ÁæΩÁîü„Åï„Çì„Åã„Çâ‰øÆÊ≠£ËøΩÂä†20190425/„Åæ„Å®„ÇÅ/CD-ROM3Âà∑/SQL_DRILL„Åì„Çå„ÅÆËß£Á≠î„ÅÑ„Çå„Åã„Åà„Å¶„ÇôOK„Å™„ÅØ„Åô„Çô/SQUAT_APP/squat-1.0.2
+2019-04-26 17:13:20,525 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_121-b13
+2019-04-26 17:13:20,525 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+2019-04-26 17:13:20,525 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86_64
+2019-04-26 17:13:20,526 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Mac OS X
+2019-04-26 17:13:20,526 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=UTF-8
+2019-04-26 17:13:20,526 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2019-04-26 17:13:20,528 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2019-04-26 17:13:20,530 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.14.2
+2019-04-26 17:13:20,530 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2019-04-26 17:13:20,531 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=UTF-8
+2019-04-26 17:13:20,531 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_121
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=null
+2019-04-26 17:13:20,532 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=
+2019-04-26 17:13:27,596 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@28f2a10f[id=5,name=hh] was loaded
+2019-05-06 19:40:56,676 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2019-05-06 19:40:56,687 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2019-05-06 19:40:57,490 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.WindowsLAFDefinition
+2019-05-06 19:41:00,452 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2019-05-06 19:41:01,301 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2019-05-06 19:41:01,784 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2019-05-06 19:41:01,785 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2019-05-06 19:41:01,785 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=C:\Program Files (x86)\Java\jre1.8.0_181\bin
+2019-05-06 19:41:01,786 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.181-b13
+2019-05-06 19:41:01,786 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=;
+2019-05-06 19:41:01,786 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) Client VM
+2019-05-06 19:41:01,787 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2019-05-06 19:41:01,787 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2019-05-06 19:41:01,787 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=
+2019-05-06 19:41:01,787 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2019-05-06 19:41:01,788 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=C:\Users\Kengo\Dropbox\0GÅyä˘äßèëê–Åz\â¸í˘3î≈SQLèëÇ´ï˚ÉhÉäÉã\ëùç¸\3ç¸\âHê∂Ç≥ÇÒÇ©ÇÁèCê≥í«â¡20190425\Ç‹Ç∆Çﬂ\CD-ROM3ç¸\SQL_DRILL\SQUAT_APP\squat-1.0.2\squat-1.0.2
+2019-05-06 19:41:01,788 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_181-b13
+2019-05-06 19:41:01,788 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+2019-05-06 19:41:01,788 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86
+2019-05-06 19:41:01,789 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Windows 10
+2019-05-06 19:41:01,789 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=MS932
+2019-05-06 19:41:01,789 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2019-05-06 19:41:01,789 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot Client Compiler
+2019-05-06 19:41:01,790 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.0
+2019-05-06 19:41:01,790 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2019-05-06 19:41:01,790 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=MS932
+2019-05-06 19:41:01,791 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2019-05-06 19:41:01,791 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=32
+2019-05-06 19:41:01,791 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.awt.windows.WToolkit
+2019-05-06 19:41:01,792 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2019-05-06 19:41:01,792 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_181
+2019-05-06 19:41:01,792 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=windows
+2019-05-06 19:41:01,793 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+2019-05-06 19:41:09,896 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@f232c4[id=6,name=jj] was loaded
+2019-05-06 19:41:48,209 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitAction:21) - squat process is shutting down
+2020-10-29 22:03:57,081 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2020-10-29 22:03:57,083 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2020-10-29 22:03:57,198 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.WindowsLAFDefinition
+2020-10-29 22:03:57,703 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2020-10-29 22:03:58,031 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=C:\Program Files\Java\jre1.8.0_261\bin
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.261-b12
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=;
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2020-10-29 22:03:58,210 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=E:\Works\Sandbox\Software\squat-1.0.2
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_261-b12
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=amd64
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Windows 10
+2020-10-29 22:03:58,211 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=MS932
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.0
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=MS932
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.awt.windows.WToolkit
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_261
+2020-10-29 22:03:58,212 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=windows
+2020-10-29 22:03:58,213 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=amd64
+2020-10-29 22:04:11,592 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@451001e5[id=7,name=root] was loaded
+2020-10-29 22:05:08,262 ERROR [Thread-18] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLÇ≈ó·äO(ErrorCode=42122, SQLState=42S22)Ç™î≠ê∂ÇµÇ‹ÇµÇΩÅBóùóRÇÕorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select CustomersName From Customers;], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select CustomersName From Customers;], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column CUSTOMERSNAME not found; SQL statement: Select CustomersName From Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2020-10-29 22:08:25,867 ERROR [Thread-55] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLÇ≈ó·äO(ErrorCode=42122, SQLState=42S22)Ç™î≠ê∂ÇµÇ‹ÇµÇΩÅBóùóRÇÕorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select Price, ProductName from Customers], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select Price, ProductName from Customers], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2020-10-29 22:08:34,076 ERROR [Thread-65] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLÇ≈ó·äO(ErrorCode=42122, SQLState=42S22)Ç™î≠ê∂ÇµÇ‹ÇµÇΩÅBóùóRÇÕorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select Price, ProductName from Customers;], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.assertQuery(AssertionImpl$$EnhancedByS2AOP$$71e9ddb4.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLÇ≈ó·äO(SQL=[Select Price, ProductName from Customers;], ErrorCode={1}, SQLState={2})Ç™î≠ê∂ÇµÇ‹ÇµÇΩ
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column PRICE not found; SQL statement: Select Price, ProductName from Customers; [42S22-41]
+	at org.h2.message.Message.addSQL(Message.java:348)
+	at org.h2.command.Parser.prepareCommand(Parser.java:211)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2020-10-31 20:28:07,772 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitActionAdapter:21) - squat process is shutting down

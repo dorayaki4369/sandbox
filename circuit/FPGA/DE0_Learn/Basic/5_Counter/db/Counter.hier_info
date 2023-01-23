@@ -1,0 +1,11 @@
+|Counter
+sw => ff[0].CLK
+sw => ff[1].CLK
+sw => ff[2].CLK
+sw => ff[3].CLK
+led[0] << ff[0].DB_MAX_OUTPUT_PORT_TYPE
+led[1] << ff[1].DB_MAX_OUTPUT_PORT_TYPE
+led[2] << ff[2].DB_MAX_OUTPUT_PORT_TYPE
+led[3] << ff[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

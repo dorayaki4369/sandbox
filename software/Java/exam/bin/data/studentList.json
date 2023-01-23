@@ -1,0 +1,34 @@
+[
+  {
+    "name": "1",
+    "english": 100,
+    "japanese": 100,
+    "math": 100,
+    "sum": 300,
+    "avg": 100.0
+  },
+  {
+    "name": "unknown",
+    "english": 0,
+    "japanese": 0,
+    "math": 0,
+    "sum": 0,
+    "avg": 0.0
+  },
+  {
+    "name": "2",
+    "english": 20,
+    "japanese": 100,
+    "math": 100,
+    "sum": 220,
+    "avg": 73.33333333333333
+  },
+  {
+    "name": "平均",
+    "english": 40,
+    "japanese": 66,
+    "math": 66,
+    "sum": 172,
+    "avg": 57.333333333333336
+  }
+]

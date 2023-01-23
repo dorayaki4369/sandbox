@@ -1,0 +1,84 @@
+﻿<controls:MetroWindow x:Class="ProcessingImage.SettingWindow"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TextElement.FontWeight="Regular"
+                      TextElement.FontSize="13"
+                      TextOptions.TextFormattingMode="Ideal"
+                      TextOptions.TextRenderingMode="Auto"
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      FontFamily="{DynamicResource MaterialDesignFont}"
+
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:local="clr-namespace:ProcessingImage"
+                      mc:Ignorable="d"
+                      Title="SettingWindow" Height="500" Width="900">
+    <Window.DataContext>
+        <local:SettingWinVM />
+    </Window.DataContext>
+
+    <materialDesign:DialogHost Identifier="RootDialog">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="212">
+                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}"
+                                  DockPanel.Dock="Top"
+                                  Margin="15" HorizontalAlignment="Right"
+                                  IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"
+                                  Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                                  CommandParameter="{x:Static Dock.Left}" />
+                    <ListBox ItemsSource="{Binding OptionHolder.Options}" SelectedIndex="0"
+                             MouseLeftButtonUp="UIElement_OnMouseLeftButtonUp">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="15" Margin="0 10 0 10"
+                                           VerticalAlignment="Center" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <materialDesign:ColorZone Mode="Dark" Padding="15" DockPanel.Dock="Top">
+                    <DockPanel>
+                        <ToggleButton x:Name="MenuToggleButton" IsChecked="False" DockPanel.Dock="Left"
+                                      Style="{DynamicResource MaterialDesignHamburgerToggleButton}"
+                                      Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+                                      CommandParameter="{x:Static Dock.Left}" />
+
+                        <!--こことTextBlockを入れ替えるとレイアウトが崩れるので注意-->
+                        <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges"
+                                                 StaysOpen="False">
+                            <StackPanel>
+                                <Button Content="Close" Click="CloseThisWindow" />
+                                <Button Content="Finish" Click="FinishSoftware" />
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+
+
+                        <TextBlock Text="Change a part of methods" FontSize="22"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </DockPanel>
+                </materialDesign:ColorZone>
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Frame Name="Frame" NavigationUIVisibility="Hidden" />
+
+                    <StackPanel Orientation="Vertical" Grid.Column="0">
+                        <Image />
+                        <Image />
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
+</controls:MetroWindow>

@@ -1,0 +1,14 @@
+{
+    "Employees": [
+        {
+            "Name": "Taro",
+            "Age": 39,
+            "Notice": "manager of yokohama branch office"
+        },
+        {
+            "Name": "Hanako",
+            "Age": 25,
+            "Notice": ""
+        }
+    ]
+}

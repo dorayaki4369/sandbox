@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>成績一覧</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<!-- フォームは一つのウェブページに一つだけ用意すること。二つ以上あると戻り値がおかしくなる。 -->
+<form method="post" th:object="${checks}">
+<h2>成績一覧</h2>
+
+<table>
+    <tr>
+        <th>名前</th>
+        <th>英語</th>
+        <th>国語</th>
+        <th>数学</th>
+        <th>合計</th>
+        <th>平均</th>
+    </tr>
+    <tr th:each="student : ${students}">
+        <td><input type="checkbox" th:text="${student.getValue(&quot;name&quot;)}" th:value="${student.hashCode()}" th:field="*{hashCodes}"/></td>
+        <td th:text="${student.getValue(&quot;english&quot;)}">英語</td>
+        <td th:text="${student.getValue(&quot;japanese&quot;)}">国語</td>
+        <td th:text="${student.getValue(&quot;math&quot;)}">数学</td>
+        <td th:text="${student.getValue(&quot;sum&quot;)}">合計</td>
+        <td th:text="${student.getValue(&quot;avg&quot;)}">平均</td>
+    </tr>
+</table>
+
+<h2>赤点対象者一覧</h2>
+
+<table>
+    <tr>
+        <th>名前</th>
+        <th>英語</th>
+        <th>国語</th>
+        <th>数学</th>
+        <th>合計</th>
+        <th>平均</th>
+    </tr>
+    <tr th:each="student : ${badStudents}">
+        <td th:text="${student.getValue(&quot;name&quot;)}">名前</td>
+        <td th:text="${student.getValue(&quot;english&quot;)}">英語</td>
+        <td th:text="${student.getValue(&quot;japanese&quot;)}">国語</td>
+        <td th:text="${student.getValue(&quot;math&quot;)}">数学</td>
+        <td th:text="${student.getValue(&quot;sum&quot;)}">合計</td>
+        <td th:text="${student.getValue(&quot;avg&quot;)}">平均</td>
+    </tr>
+</table>
+
+<h2>成績データを削除</h2>
+
+<p th:if="${message != null}" th:text="${message}">メッセージ</p>
+
+<button type="submit">削除</button>
+</form>
+
+<hr />
+
+<a href="register">登録</a>
+
+</body>
+</html>

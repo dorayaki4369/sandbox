@@ -1,0 +1,32 @@
+﻿<Window x:Class="MakeSourceImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakeSourceImage"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ColorImage" Grid.Column="0" Margin="0"
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Image x:Name="DepthImage" Grid.Column="1" Margin="0"
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+        <Button x:Name="SaveButton" Content="画像保存" Grid.Column="2" Margin="0"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                KeyDown="SaveButton_OnKeyDown"
+                Click="ClickSaveButton" />
+        
+        <StackPanel Grid.Column="3" Margin="0">
+            <TextBlock Name="ImageNum" />
+            <TextBox KeyDown="SaveButton_OnKeyDown"/>
+        </StackPanel>
+    </Grid>
+</Window>

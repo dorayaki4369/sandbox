@@ -1,0 +1,11 @@
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\ControlInstrument.exe.config
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\ControlInstrument.exe
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\ControlInstrument.pdb
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\Ivi.Visa.dll
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\Ivi.Visa.xml
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\obj\Debug\ControlInstrument.csprojAssemblyReference.cache
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\obj\Debug\ControlInstrument.csproj.CopyComplete
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\obj\Debug\ControlInstrument.exe
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\obj\Debug\ControlInstrument.pdb
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\Newtonsoft.Json.dll
+C:\Users\0048006001\source\local\C#\ControlInstrument\ControlInstrument\bin\Debug\Newtonsoft.Json.xml

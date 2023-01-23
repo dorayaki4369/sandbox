@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\dorayaki4369\dropbox\source\cpp\opencv\testtracking\testtracking\main.cpp : fatal error C1041: プログラム データベース 'C:\Users\dorayaki4369\Dropbox\Source\Cpp\OpenCV\TestTracking\TestTracking\x64\Debug\vc140.idb' を開けません。複数の CL.EXE が同じ .PDB ファイルに書き込む場合、/FS を使用してください。
+cl : コマンド ライン warning D9028: 簡易リビルド時のエラーです、通常のビルドに戻します

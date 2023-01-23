@@ -1,0 +1,24 @@
+[OpenCV]
+<全ての構成>
+[C/C++][全般](追加のインクルードディレクトリ)    $(OpenCV_PATH_v3_2_0)\include
+[リンカー][全般](追加のライブラリディレクトリ)      $(OpenCV_PATH_v3_2_0)\x64\vc14\lib
+
+<Release>
+[リンカー][入力](追加の依存ファイル)           opencv_world320.lib
+
+<Debug>
+[リンカー][入力](追加の依存ファイル)           opencv_world320d.lib
+
+[GameLib2012]
+Win32(x86)で動作
+<全ての構成>
+[C/C++][全般](追加のインクルードディレクトリ)    $(GAME_LIB_DIR)\    \include
+[リンカー][全般](追加のライブラリディレクトリ)      $(GAME_LIB_DIR)\    \lib
+
+<Release>
+[C/C++][コード生成](ランタイムライブラリ)      mulchthread(/MT)
+[リンカー][入力](追加の依存ファイル)           GameLib.lib
+
+<Debug>
+[C/C++][コード生成](ランタイムライブラリ)      multithread Debug(/MTd)
+[リンカー][入力](追加の依存ファイル)           GameLib_d.lib

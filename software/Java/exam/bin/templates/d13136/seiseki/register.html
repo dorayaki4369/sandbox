@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>成績入力</title>
+</head>
+<body>
+
+<h2>成績入力</h2>
+
+<p th:if="${message != null}" th:text="${message}">メッセージ</p>
+
+<form method="post">
+	名前: <input name="name" /><br />
+    英語: <input name="english" /><br />
+    国語: <input name="japanese" /><br />
+    数学: <input name="math" /><br />
+    <button type="submit">登録</button>
+</form>
+
+<hr />
+
+<a href="list">一覧</a>
+
+</body>
+</html>

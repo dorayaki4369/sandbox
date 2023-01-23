@@ -1,0 +1,40 @@
+|Timer
+clk => dcnt[0].CLK
+clk => dcnt[1].CLK
+clk => dcnt[2].CLK
+clk => dcnt[3].CLK
+clk => cnt2[0].CLK
+clk => cnt2[1].CLK
+clk => cnt2[2].CLK
+clk => cnt2[3].CLK
+clk => cnt2[4].CLK
+clk => cnt2[5].CLK
+clk => cnt2[6].CLK
+clk => cnt1[0].CLK
+clk => cnt1[1].CLK
+clk => cnt1[2].CLK
+clk => cnt1[3].CLK
+clk => cnt1[4].CLK
+clk => cnt1[5].CLK
+clk => cnt1[6].CLK
+clk => cnt1[7].CLK
+clk => cnt1[8].CLK
+clk => cnt1[9].CLK
+clk => cnt1[10].CLK
+clk => cnt1[11].CLK
+clk => cnt1[12].CLK
+clk => cnt1[13].CLK
+clk => cnt1[14].CLK
+clk => cnt1[15].CLK
+led[0] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Equal8.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= Equal9.DB_MAX_OUTPUT_PORT_TYPE
+led[8] <= Equal10.DB_MAX_OUTPUT_PORT_TYPE
+led[9] <= Equal11.DB_MAX_OUTPUT_PORT_TYPE
+
+

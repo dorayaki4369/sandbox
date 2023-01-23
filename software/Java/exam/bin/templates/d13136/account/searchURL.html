@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>URL検索</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h2>URL検索</h2>
+
+<p th:if="${message != null}" th:text="${message}">メッセージ</p>
+<table th:if="${resultList != null}">
+	<tr>
+		<th>アカウント名</th>
+		<th>パスワード</th>
+		<th>URL</th>
+	</tr>
+	<tr th:each="account : ${resultList}">
+		<td th:text="${account.getValue(&quot;name&quot;)}">アカウント名</td>
+		<td th:text="${account.getValue(&quot;password&quot;)}">パスワード</td>
+		<td th:text="${account.getValue(&quot;url&quot;)}">URL</td>
+	</tr>
+</table>
+
+<form method="post">
+    URL: <input name="url" />
+    <button type="submit">検索</button><br />
+    <input type="checkBox" name="isDelete" />チェックをつけると検索したURLと完全一致するURLを持つアカウントを削除します。
+</form>
+
+<hr />
+
+<a href="register">登録</a> <a href="list">一覧</a>
+
+</body>
+</html>

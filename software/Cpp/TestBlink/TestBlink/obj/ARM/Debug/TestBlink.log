@@ -1,0 +1,9 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '172.21.2.111'
+  Starting remote build
+  Compiling sources:
+  Linking objects
+  g++: error: unrecognized command line option ‘--Wl,--exclude-libsopencv_world320d.lib’
+  
+g++ : error : unrecognized command line option ‘--Wl,--exclude-libsopencv_world320d.lib’

@@ -1,0 +1,3 @@
+module Timer(clk, oclk);
+	
+endmodule
